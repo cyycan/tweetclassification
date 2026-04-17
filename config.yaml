@@ -1,0 +1,16 @@
+paths:
+  data_dir: data
+  artifacts_dir: artifacts
+
+files:
+  tweets_csv: data/Tweets.csv
+
+model:
+  max_features: 5000
+  ngram_range: [1, 2]
+  max_df: 0.8
+  max_iter: 1000
+
+app:
+  host: 127.0.0.1
+  port: 8000
