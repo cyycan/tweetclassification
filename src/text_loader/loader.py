@@ -49,7 +49,7 @@ class DataLoader:
         return text.strip()
 
     def vectorize_text(self, tweets: list[str]):
-        self.vectorizer = TfidfVectorizer(max_features=2500, min_df=1, max_df=0.8, stop_words="english")
+        self.vectorizer = TfidfVectorizer(max_features=2500, min_df=1, max_df=0.8, ngram_range=(1,2), stop_words="english")
         return self.vectorizer.fit_transform(tweets).toarray()
 
     def label_encoder(self, parties):
